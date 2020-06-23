@@ -2,6 +2,10 @@ import Head from "next/head";
 
 const Home = () => (
   <div className="container">
+    <Head>
+      <title>agency.house</title>
+    </Head>
+
     <div className="column">
       <img src="./dot_house.svg" alt="agency.house"></img>
       <img src="./ah_logo.svg" alt="agency house logo"></img>
@@ -9,9 +13,9 @@ const Home = () => (
     </div>
 
     <div className="credit">
-      Photo by{" "}
+      PHOTO BY{" "}
       <a href="https://unsplash.com/@augustinewong?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">
-        Augustine Wong
+        AUGUSTINE WONG
       </a>
     </div>
     <style jsx>
@@ -30,13 +34,13 @@ const Home = () => (
         }
 
         .credit {
-          color: rgba(1, 1, 1, 0.2);
+          color: rgba(1, 1, 1, 0.75);
           font-size: 0.75rem;
           padding-bottom: 1rem;
         }
 
         a {
-          color: rgba(1, 1, 1, 0.2);
+          color: rgba(1, 1, 1, 0.75);
         }
       `}
     </style>
