@@ -4,6 +4,10 @@ const Home = () => (
   <div className="container">
     <Head>
       <title>agency.house</title>
+      <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1"
+      ></meta>
     </Head>
 
     <div className="column">
@@ -20,10 +24,14 @@ const Home = () => (
     </div>
     <style jsx>
       {`
+        img {
+          width: 95%;
+        }
         .container {
+          height: 100vh;
           display: flex;
           flex-direction: column;
-          justify-content: center;
+          justify-content: space-between;
           align-items: center;
         }
 
