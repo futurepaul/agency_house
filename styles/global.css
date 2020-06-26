@@ -1,0 +1,30 @@
+@font-face {
+  font-family: "T-Star";
+  src: url("../public/fonts/T-Star-Regular.woff2");
+  src: url("../public/fonts/T-Star-Regular.woff");
+}
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: IBM Plex Sans, -apple-system, BlinkMacSystemFont, Segoe UI,
+    Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue,
+    sans-serif;
+  color: #292929;
+  overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: "T-Star";
+}
+
+html {
+  background-color: #f3f0e9;
+}
+
+* {
+  box-sizing: border-box;
+}
