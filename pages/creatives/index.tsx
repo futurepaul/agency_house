@@ -19,6 +19,10 @@ const CreativeCard = () => {
               font-weight: normal;
               text-transform: uppercase;
             }
+
+            section:hover {
+              cursor: url("/lasso.png"), auto;
+            }
           `}
         </style>
       </section>

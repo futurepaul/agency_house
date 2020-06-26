@@ -33,6 +33,48 @@ const CreativeCard = () => {
   );
 };
 
+const Stat = ({ question, answer }) => {
+  return (
+    <div>
+      <h3>{question}</h3>
+      <p>{answer}</p>
+      <style jsx>{`
+        div {
+          border-top: 1px solid ${theme.dark2};
+          max-width: 20rem;
+        }
+        h3 {
+          position: absolute;
+          margin-top: -1.45rem;
+          font-family: "T-Star";
+          text-transform: uppercase;
+          padding: 0.5rem;
+          font-size: 1.25rem;
+          font-weight: normal;
+        }
+        p {
+          margin: 0;
+          margin-top: 0.5rem;
+          text-align: right;
+        }
+      `}</style>
+    </div>
+  );
+};
+
+const qa = [
+  { q: "Freelance or Full-time", a: "Full-time" },
+  { q: "Based in", a: "Los Angeles" },
+  { q: "Field", a: "Graphic Design" },
+  { q: "Interest", a: "#AppDesign, #projection, #documentaryfilms" },
+  { q: "Favorite Project", a: "Designing Hall of Magic" },
+  { q: "Goal Brand", a: "Capri Sun" },
+  {
+    q: "Passion Project",
+    a: "I want to project films in sync outdoors across the country.",
+  },
+];
+
 const Creatives = () => (
   <Layout>
     <main>
@@ -41,30 +83,11 @@ const Creatives = () => (
       </div>
       <div>
         <ul>
-          <li>
-            <strong>Freelance or Full-time</strong>
-            <span>Full-time</span>
-          </li>
-          <li>
-            <strong>Based in</strong> Los Angeles
-          </li>
-          <li>
-            <strong>Field</strong> Graphic Design{" "}
-          </li>
-          <li>
-            <strong>Interests</strong> #AppDesign, #projection,
-            #documentaryfilms
-          </li>
-          <li>
-            <strong>Favorite Project</strong> Designing Hall of magic
-          </li>
-          <li>
-            <strong>Goal Brand</strong> Capri Sun
-          </li>
-          <li>
-            <strong>Passion Project</strong> I want to project films in sync
-            outdoors across the country.{" "}
-          </li>
+          {qa.map((qa) => (
+            <li>
+              <Stat question={qa.q} answer={qa.a} />
+            </li>
+          ))}
         </ul>
       </div>
     </main>
@@ -76,25 +99,7 @@ const Creatives = () => (
         }
         li {
           padding: 0.5rem;
-          border-top: 1px solid ${theme.dark2};
           margin-top: 2rem;
-          font-weight: bold;
-        }
-        strong {
-          position: absolute;
-          margin-top: -1.95rem;
-          font-family: "T-Star";
-          text-transform: uppercase;
-          padding: 0.5rem;
-          font-size: 1.25rem;
-          font-weight: normal;
-        }
-
-        u {
-          padding: 0.5rem;
-          background-color: white;
-          border: 1px solid ${theme.dark2};
-          text-decoration: none;
         }
         .row {
           display: flex;
