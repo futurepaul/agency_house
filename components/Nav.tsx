@@ -6,9 +6,12 @@ const Nav = () => {
         <Link href="/creatives">
           <a>Creatives</a>
         </Link>
+
         <a href="#">Brands</a>
         <a href="#">Projects</a>
-        <a href="#">About</a>
+        <Link href="/about">
+          <a>About</a>
+        </Link>
       </div>
       <div className="strikethrough"></div>
       <style jsx>
