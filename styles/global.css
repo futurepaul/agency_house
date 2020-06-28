@@ -19,6 +19,9 @@ h2,
 h3,
 h4 {
   font-family: "T-Star";
+  font-weight: normal;
+  text-transform: uppercase;
+  margin: 0;
 }
 
 html {

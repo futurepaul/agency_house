@@ -3,14 +3,16 @@ const Nav = () => {
   return (
     <div className="nav">
       <div className="row">
-        <Link href="/creatives">
-          <a>Creatives</a>
+        <Link href="/talent">
+          <a>Talent</a>
         </Link>
 
-        <a href="#">Brands</a>
-        <a href="#">Projects</a>
-        <Link href="/about">
-          <a>About</a>
+        <a href="#">Clients</a>
+        <Link href="/projects">
+          <a>Projects</a>
+        </Link>
+        <Link href="/story">
+          <a>Story</a>
         </Link>
       </div>
       <div className="strikethrough"></div>
