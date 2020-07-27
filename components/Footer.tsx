@@ -10,15 +10,12 @@ const Footer = () => {
         </p>
       </section>
       <section>
-        <h2>Phone</h2>
+        <h2>Telegraph</h2>
         <p>509 551 1910</p>
       </section>
-      <section>
-        <h2>Address</h2>
-        <p>16 Diamond Street</p>
-        <p>Brooklyn, NY 11222</p>
-      </section>
-      <section>
+
+      <section></section>
+      <section className="right">
         <h2>Creatives</h2>
         <p>
           <a href="#">Link 1</a>
@@ -27,16 +24,7 @@ const Footer = () => {
           <a href="#">Link 2</a>
         </p>
       </section>
-      <section>
-        <h2>Brands</h2>
-        <p>
-          <a href="#">Link 1</a>
-        </p>
-        <p>
-          <a href="#">Link 2</a>
-        </p>
-      </section>
-      <section>
+      <section className="right">
         <h2>Projects</h2>
         <p>
           <a href="#">Link 1</a>
@@ -45,16 +33,11 @@ const Footer = () => {
           <a href="#">Link 2</a>
         </p>
       </section>
-      <section>
-        <h2>About</h2>
-        <p>
-          <a href="#">Link 1</a>
-        </p>
-        <p>
-          <a href="#">Link 2</a>
-        </p>
-      </section>
+
       <style jsx>{`
+        .right {
+          text-align: right;
+        }
         h2 {
           text-transform: uppercase;
           font-weight: normal;

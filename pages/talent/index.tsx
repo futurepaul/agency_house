@@ -44,6 +44,44 @@ const Talent = () => (
       </section>
       <section className="with-header">
         <StrikeThroughHeader>
+          <h2>Agency Is A Place For</h2>
+        </StrikeThroughHeader>
+        <div className="row content uppercase">
+          <p>
+            +folks with full-time gigs
+            <br />
+            +confirmed freelancers
+            <br />
+            +folks in unions
+            <br />
+            +folks not in unions
+            <br />
+            +folks with a passion project of their own
+            <br />
+          </p>
+          <div className="spacer" />
+          <div className="spacer" />
+          <p>
+            +folks who want to work on other folks’s passion projects
+            <br />
+            +folks established in one field/path but want to build experience in
+            a new <br />
+            +creatives
+            <br />
+            +folks that wouldn’t consider themselves creatives
+          </p>
+        </div>
+      </section>
+      <section id="ready">
+        <div className="row">
+          <div className="blaze-wrap">
+            <h2>Ready to blaze a trail?</h2>
+          </div>
+          <img src="./a_bunch_of_cowboys.jpg" />
+        </div>
+      </section>
+      <section id="talent" className="with-header">
+        <StrikeThroughHeader>
           <h1>The Talent</h1>
         </StrikeThroughHeader>
         <div className="row">
@@ -64,6 +102,36 @@ const Talent = () => (
           background-size: auto 75%;
           background-repeat: no-repeat;
         }
+
+        #ready {
+          background-image: url("./shell_texture.jpg");
+          background-blend-mode: darken;
+          background-color: ${theme.light};
+          background-position: center;
+          background-size: 100% 50%;
+          background-repeat: no-repeat;
+        }
+
+        #ready h2 {
+          color: white;
+          background-color: ${theme.dark1};
+          width: 30vw;
+          padding: 5rem;
+        }
+
+        .blaze-wrap {
+          margin-bottom: -10rem;
+          border: 2px solid ${theme.tan3};
+          padding: 1rem;
+        }
+
+        #ready img {
+          border: 10px solid ${theme.dark2};
+          max-width: 50vw;
+          object-fit: cover;
+          margin-top: -10rem;
+        }
+
         .flex {
           flex: 1;
         }
@@ -78,6 +146,7 @@ const Talent = () => (
           border-bottom: 2px solid ${theme.dark2};
           margin-right: 2rem;
         }
+
         section {
           min-height: 100vh;
           display: flex;
@@ -89,11 +158,32 @@ const Talent = () => (
           flex-direction: column;
           justify-content: center;
         }
+        .content {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          padding: 0 4rem;
+          font-size: 1.25rem;
+          flex: 1;
+        }
         .row {
           flex: 1;
           display: flex;
           flex-direction: row;
+          align-items: center;
           justify-content: space-around;
+        }
+
+        .uppercase {
+          text-transform: uppercase;
+        }
+
+        .row p {
+          width: 35vw;
+        }
+
+        .spacer {
+          flex-basis: 2rem;
         }
         main {
           display: flex;

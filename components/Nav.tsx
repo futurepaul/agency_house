@@ -7,7 +7,7 @@ const Nav = () => {
           <a>Talent</a>
         </Link>
 
-        <a href="#">Clients</a>
+        <a href="#">Consult</a>
         <Link href="/projects">
           <a>Projects</a>
         </Link>

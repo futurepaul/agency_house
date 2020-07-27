@@ -5452,6 +5452,16 @@ typeface-ibm-plex-sans@^0.0.75:
   resolved "https://registry.yarnpkg.com/typeface-ibm-plex-sans/-/typeface-ibm-plex-sans-0.0.75.tgz#47fffee4b9004e9d22300ed99bb679cbeed5c6ff"
   integrity sha512-IBxDEt5r0Xo5EshGBb1CR1ec3ApNI0jK0o2gSGNZIoKml9q99a/Qcbb8u8IK0x/M+nso8FzcMW03Hz6gSfCIAg==
 
+typeface-lexend-exa@^1.1.3:
+  version "1.1.3"
+  resolved "https://registry.yarnpkg.com/typeface-lexend-exa/-/typeface-lexend-exa-1.1.3.tgz#414fd410a2f63c16b1351bce7ba5c176f77d79f3"
+  integrity sha512-ze2Ju7Wh6dvKJ5fDCf4/f+3bmFxbobHp8zz8DfviKT2rfnlXpLpGTG7h2t47WydAeI9Th1g8qYQLub6tmYB/Gg==
+
+typeface-lexend-zetta@^1.1.3:
+  version "1.1.3"
+  resolved "https://registry.yarnpkg.com/typeface-lexend-zetta/-/typeface-lexend-zetta-1.1.3.tgz#328fce5752b89ef951d3f8513c8d4b2e7d4f7dbb"
+  integrity sha512-7RyzmIO7GscDOAgGW1DHxIULWsGVB6XQ14/xZ4toTbJbO0kbvUWblNftrFD2uHTjYvcPpjhvgw7hQmW06mWIWw==
+
 typescript@^3.9.5:
   version "3.9.5"
   resolved "https://registry.yarnpkg.com/typescript/-/typescript-3.9.5.tgz#586f0dba300cde8be52dd1ac4f7e1009c1b13f36"

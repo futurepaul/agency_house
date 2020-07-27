@@ -115,7 +115,7 @@ const Projects = () => {
             <h1>The System</h1>
             <div className="strikethrough"></div>
           </div>
-          <div className="row content">
+          <div className="row width-100">
             {steps.map((step) => (
               <motion.div positionTransition key={step}>
                 <CreativeCard first={"step"} last={step} />
@@ -160,6 +160,12 @@ const Projects = () => {
           }
           li {
             list-style-type: "+";
+          }
+          section {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
           }
           section.with-header {
             flex: 1;
@@ -209,6 +215,11 @@ const Projects = () => {
             flex: 1;
             display: flex;
             flex-direction: row;
+            justify-content: space-around;
+          }
+
+          .width-100 {
+            width: 100vw;
           }
 
           .accent-wrapper {

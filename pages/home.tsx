@@ -5,7 +5,7 @@ const Home = () => (
   <Layout>
     <main>
       <h2>
-        Agency is a production house built to equip creatives to bring their
+        Agency House is a platform built to equip creatives to bring their
         passion projects to life.
       </h2>
     </main>
