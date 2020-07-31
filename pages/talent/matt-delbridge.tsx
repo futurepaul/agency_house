@@ -63,19 +63,22 @@ const Stat = ({ question, answer }) => {
 };
 
 const qa = [
-  { q: "Freelance or Full-time", a: "Full-time" },
   { q: "Based in", a: "Los Angeles" },
-  { q: "Field", a: "Graphic Design" },
-  { q: "Interest", a: "#AppDesign, #projection, #documentaryfilms" },
-  { q: "Favorite Project", a: "Designing Hall of Magic" },
-  { q: "Goal Brand", a: "Capri Sun" },
+  { q: "Field / Industry", a: "Graphic Design" },
+  { q: "Experience", a: "Designing things" },
+  { q: "Full-time or freelancer", a: "Full-time" },
+  { q: "Tier: Day / hourly rate", a: "???" },
+  { q: "Available to hire for:", a: "???" },
+  { q: "Interests", a: "#AppDesign, #projection, #documentaryfilms" },
+  { q: "Favorite project you've worked on", a: "Designing Hall of Magic" },
   {
     q: "Passion Project",
     a: "I want to project films in sync outdoors across the country.",
   },
+  { q: "Superpower", a: "Capri Sun" },
 ];
 
-const Creatives = () => (
+const SingleTalent = () => (
   <Layout>
     <main>
       <div className="row">
@@ -96,10 +99,15 @@ const Creatives = () => (
         ul {
           padding-top: 2rem;
           list-style: none;
+          display: flex;
+          flex-direction: row;
+          flex-wrap: wrap;
+          width: 35rem;
         }
         li {
-          padding: 0.5rem;
+          padding: 1rem;
           margin-top: 2rem;
+          width: 15rem;
         }
         .row {
           display: flex;
@@ -126,4 +134,4 @@ const Creatives = () => (
   </Layout>
 );
 
-export default Creatives;
+export default SingleTalent;

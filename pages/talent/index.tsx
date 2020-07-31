@@ -2,8 +2,10 @@ import Layout from "../../components/Layout";
 import Link from "next/link";
 import StrikeThroughHeader from "../../components/StrikeThroughHeader";
 import theme from "../../theme";
+import talent from "../../talent.json";
 
 export const CreativeCard = ({ first, last }) => {
+  console.log(talent);
   return (
     <Link href="/talent/matt-delbridge">
       <section>
