@@ -1,20 +1,22 @@
-export default ({ children, color = "black" }) => (
+export default ({ children, color = "black", offset = 1.35 }) => (
   <div className="line-through-header">
-    {children}
     <div className="strikethrough"></div>
+    {children}
     <style jsx>
       {`
         .line-through-header {
           width: 100vw;
           display: flex;
-          flex-direction: row;
-          align-self: start;
+          flex-direction: column;
           align-items: center;
           justify-content: center;
         }
         .strikethrough {
-          position: absolute;
+           {
+            /* position: absolute; */
+          }
           height: 2px;
+          margin-bottom: -${offset}rem;
           width: 100vw;
           background-color: ${color};
         }

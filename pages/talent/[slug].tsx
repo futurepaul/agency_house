@@ -1,11 +1,11 @@
 import Layout from "../../components/Layout";
 import theme from "../../theme";
 import { motion } from "framer-motion";
-import talent from "../../talent.json";
 import fs from "fs";
+import slugify from "../../util";
+import { CreativeCard } from ".";
 
-const CreativeCard = ({ name }) => {
-  let [first, last] = name.split(" ");
+const AnimatedCard = ({ person }) => {
   return (
     <motion.div
       animate={{
@@ -16,22 +16,7 @@ const CreativeCard = ({ name }) => {
         loop: Infinity,
       }}
     >
-      <img src="../matt.png" />
-      <h2>
-        {first}
-        <br />
-        {last}
-      </h2>
-      <style jsx>
-        {`
-          h2 {
-            margin: 0;
-            font-size: 2rem;
-            font-weight: normal;
-            text-transform: uppercase;
-          }
-        `}
-      </style>
+      <CreativeCard person={person} ownPage />
     </motion.div>
   );
 };
@@ -64,28 +49,12 @@ const Stat = ({ question, answer }) => {
   );
 };
 
-const qa = [
-  { q: "Based in", a: "Los Angeles" },
-  { q: "Field / Industry", a: "Graphic Design" },
-  { q: "Experience", a: "Designing things" },
-  { q: "Full-time or freelancer", a: "Full-time" },
-  { q: "Tier: Day / hourly rate", a: "???" },
-  { q: "Available to hire for:", a: "???" },
-  { q: "Interests", a: "#AppDesign, #projection, #documentaryfilms" },
-  { q: "Favorite project you've worked on", a: "Designing Hall of Magic" },
-  {
-    q: "Passion Project",
-    a: "I want to project films in sync outdoors across the country.",
-  },
-  { q: "Superpower", a: "Capri Sun" },
-];
-
 const SingleTalent = ({ person }) => {
   return (
     <Layout>
       <main>
         <div className="row">
-          <CreativeCard name={person.name} />
+          <AnimatedCard person={person} />
         </div>
         <div>
           <ul>
@@ -182,32 +151,6 @@ const SingleTalent = ({ person }) => {
   );
 };
 
-function slugify(str) {
-  str = str.replace(/^\s+|\s+$/g, "");
-
-  // Make the string lowercase
-  str = str.toLowerCase();
-
-  // Remove accents, swap ñ for n, etc
-  var from =
-    "ÁÄÂÀÃÅČÇĆĎÉĚËÈÊẼĔȆÍÌÎÏŇÑÓÖÒÔÕØŘŔŠŤÚŮÜÙÛÝŸŽáäâàãåčçćďéěëèêẽĕȇíìîïňñóöòôõøðřŕšťúůüùûýÿžþÞĐđßÆa·/_,:;";
-  var to =
-    "AAAAAACCCDEEEEEEEEIIIINNOOOOOORRSTUUUUUYYZaaaaaacccdeeeeeeeeiiiinnooooooorrstuuuuuyyzbBDdBAa------";
-  for (var i = 0, l = from.length; i < l; i++) {
-    str = str.replace(new RegExp(from.charAt(i), "g"), to.charAt(i));
-  }
-
-  // Remove invalid chars
-  str = str
-    .replace(/[^a-z0-9 -]/g, "")
-    // Collapse whitespace and replace by -
-    .replace(/\s+/g, "-")
-    // Collapse dashes
-    .replace(/-+/g, "-");
-
-  return str;
-}
-
 export const getStaticPaths = async () => {
   const talent = JSON.parse(fs.readFileSync("talent.json").toString());
   console.log(talent);
@@ -226,6 +169,7 @@ export const getStaticPaths = async () => {
 };
 
 export const getStaticProps = async ({ params: { slug } }) => {
+  const talent = JSON.parse(fs.readFileSync("talent.json").toString());
   let personProp = null;
   for (const person of talent) {
     if (slugify(person.name) === slug) {
