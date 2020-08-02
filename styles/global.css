@@ -1,0 +1,57 @@
+@font-face {
+  font-family: "T-Star";
+  src: url("../public/fonts/T-Star-Regular.woff2");
+  src: url("../public/fonts/T-Star-Regular.woff");
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: "T-Star", monospace;
+  color: #292929;
+  overflow-x: hidden;
+}
+
+a {
+  color: #f3f0e9;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: "T-Star";
+  font-weight: normal;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+html {
+  background-color: #f3f0e9;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+}
+
+.center {
+  justify-content: center;
+  align-items: center;
+}
+
+@media all and (max-width: 480px) {
+  .row {
+    flex-direction: column;
+  }
+}
