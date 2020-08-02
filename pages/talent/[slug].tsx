@@ -145,6 +145,18 @@ const SingleTalent = ({ person }) => {
             text-transform: uppercase;
             width: 60vw;
           }
+
+          @media all and (max-width: 480px) {
+            ul {
+              flex-direction: column;
+              width: 100vw;
+            }
+            li {
+              padding: 1rem;
+              margin-top: 2rem;
+              width: 90vw;
+            }
+          }
         `}
       </style>
     </Layout>

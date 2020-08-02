@@ -1,9 +1,9 @@
 import theme from "../theme";
 import Layout from "../components/Layout";
 import { useState, useEffect } from "react";
-import { CreativeCard } from "./talent";
 import { motion } from "framer-motion";
 import StrikeThroughHeader from "../components/StrikeThroughHeader";
+import useBreakpoints from "@thebiltheory/usebreakpoints";
 
 function copyArray(source, array) {
   var index = -1,
@@ -40,7 +40,7 @@ const initialSteps = [
     id: "3",
     image: "3_cattle_drive.jpg",
     caption:
-      "3. Creator builds a team with Agency House members and uses their tokens",
+      "3. Creator builds a team with Agency House members and uses their tokens to pay members",
   },
   {
     id: "4",
@@ -73,6 +73,29 @@ const StepCard = ({ data }) => {
           h2 {
             padding-top: 1rem;
             width: 20vw;
+          }
+
+          @media all and (max-width: 480px) {
+            h2 {
+              padding-top: 1rem;
+              width: 80vw;
+            }
+            .img-wrap {
+              width: 80vw;
+              height: 80vw;
+              background-color: white;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+            }
+            img {
+              max-width: 80vw;
+              max-height: 80vw;
+            }
+            section {
+              margin-bottom: 2rem;
+              margin-top: 2rem;
+            }
           }
         `}
       </style>
@@ -133,41 +156,93 @@ const DreamWork = () => (
         text-transform: uppercase;
         flex: 1;
       }
+
+      @media all and (max-width: 480px) {
+        .accent-wrapper {
+          flex-direction: column;
+        }
+        img {
+          flex: none;
+          max-width: 90vw;
+          object-fit: cover;
+          margin-right: -2rem;
+        }
+
+        .accent-wrapper h2 {
+          margin-top: 4rem;
+        }
+      }
     `}</style>
   </section>
 );
 
 const WhyHow = () => (
   <section className="with-header">
-    <StrikeThroughHeader offset={2.7}>
-      <div className="row center">
-        <h1>Why</h1>
+    <div className="desktop">
+      <StrikeThroughHeader offset={2.7}>
+        <div className="row center">
+          <h1>Why</h1>
+          <div className="spacer" />
+          <div className="spacer" />
+          <h1>How</h1>
+        </div>
+      </StrikeThroughHeader>
+      <div className="row center content">
+        <p>
+          In the film and television world “the talent” refers to the actors.
+          Here at agency we’re interested in “talent” both above the line and
+          below the line. From PAs, craft services, transpo, drivers – to UPMs,
+          EPs, script supervisors etc – we’re interested. Because to make these
+          passion projects we need it all.
+        </p>
         <div className="spacer" />
         <div className="spacer" />
-        <h1>How</h1>
+        <p>
+          Around here we operate on a token basis for paying people to work on
+          our passion projects. Gone are the days of calling in all the favors
+          and always feeling compelled to work on every passion project one of
+          your buddies does just to build capital. Cue the token system. We keep
+          track of your “credit” and also give a currency framework to alleviate
+          any weirdness when you’re not paying someone to work for you.
+        </p>
       </div>
-    </StrikeThroughHeader>
-    <div className="row content">
-      <p>
-        In the film and television world “the talent” refers to the actors. Here
-        at agency we’re interested in “talent” both above the line and below the
-        line. From PAs, craft services, transpo, drivers – to UPMs, EPs, script
-        supervisors etc – we’re interested. Because to make these passion
-        projects we need it all.
-      </p>
-      <div className="spacer" />
-      <div className="spacer" />
-      <p>
-        Around here we operate on a token basis for paying people to work on our
-        passion projects. Gone are the days of calling in all the favors and
-        always feeling compelled to work on every passion project one of your
-        buddies does just to build capital. Cue the token system. We keep track
-        of your “credit” and also give a currency framework to alleviate any
-        weirdness when you’re not paying someone to work for you.
-      </p>
     </div>
+    <div className="mobile">
+      <div className="content">
+        <StrikeThroughHeader offset={2.7}>
+          <h1>Why</h1>
+        </StrikeThroughHeader>
+        <p>
+          In the film and television world “the talent” refers to the actors.
+          Here at agency we’re interested in “talent” both above the line and
+          below the line. From PAs, craft services, transpo, drivers – to UPMs,
+          EPs, script supervisors etc – we’re interested. Because to make these
+          passion projects we need it all.
+        </p>
+        <div className="spacer" />
+        <div className="spacer" />
+        <StrikeThroughHeader offset={2.7}>
+          <h1>How</h1>
+        </StrikeThroughHeader>
+        <p>
+          Around here we operate on a token basis for paying people to work on
+          our passion projects. Gone are the days of calling in all the favors
+          and always feeling compelled to work on every passion project one of
+          your buddies does just to build capital. Cue the token system. We keep
+          track of your “credit” and also give a currency framework to alleviate
+          any weirdness when you’re not paying someone to work for you.
+        </p>
+      </div>
+    </div>
+
     <style jsx>
       {`
+        .mobile {
+          display: none;
+        }
+        .desktop {
+          display: block;
+        }
         h1 {
           font-size: 5rem;
           color: ${theme.light};
@@ -190,6 +265,34 @@ const WhyHow = () => (
         }
         .row p {
           width: 35vw;
+        }
+
+        .row {
+          align-items: start;
+        }
+
+        @media all and (max-width: 480px) {
+          .desktop {
+            display: none;
+          }
+          .mobile {
+            display: block;
+          }
+          .row p {
+            width: 90vw;
+          }
+          .spacer {
+            height: 2rem;
+          }
+
+          p {
+            padding-right: 2rem;
+            padding-left: 2rem;
+          }
+
+          section {
+            margin-bottom: 4rem;
+          }
         }
       `}
     </style>
@@ -214,8 +317,7 @@ const TheCycle = () => (
         <p>
           When you sign your 1-year membership with Agency House you commit five
           days of your time to work on other’s projects. You also receive five
-          tokens to employ others on your projects. Refer to FAQ for more
-          details.
+          tokens to employ others on your projects.{" "}
         </p>
         <p>
           Agency House will be just as involved in your projects as you want.
@@ -259,15 +361,34 @@ const TheCycle = () => (
         align-items: center;
         justify-content: space-between;
       }
+
+      @media all and (max-width: 480px) {
+        img {
+          flex: none;
+          object-fit: cover;
+          max-width: 90vw;
+        }
+      }
     `}</style>
   </section>
 );
 const TheSystem = () => {
   const [steps, setSteps] = useState(initialSteps);
 
+  const [value, currentBreakpoint] = useBreakpoints(
+    ["mobile", "1000", "huge screen"],
+    [480, 1000, 1001]
+  );
+
+  console.log(currentBreakpoint);
+
   useEffect(() => {
-    setTimeout(() => setSteps(loop(steps)), 2000);
-  }, [steps]);
+    if (currentBreakpoint < 1001) {
+      setSteps(initialSteps);
+    } else {
+      setTimeout(() => setSteps(loop(steps)), 2000);
+    }
+  }, [steps, currentBreakpoint]);
 
   return (
     <section id="tokens">
@@ -300,6 +421,15 @@ const TheSystem = () => {
           }
           .width-100 {
             width: 100vw;
+          }
+
+          @media all and (max-width: 480px) {
+            section {
+              margin-top: 4rem;
+            }
+            .row {
+              align-items: center;
+            }
           }
         `}
       </style>
@@ -382,6 +512,26 @@ const Guidelines = () => (
         display: flex;
         flex-direction: row;
         align-items: center;
+      }
+
+      @media all and (max-width: 480px) {
+        .accent-wrapper {
+          display: flex;
+          flex-direction: column;
+          width: 90vw;
+          background-color: ${theme.tan2};
+          color: ${theme.light};
+        }
+        img {
+          flex: none;
+          max-width: 80vw;
+          max-width: 80vw;
+          object-fit: cover;
+        }
+
+        section {
+          margin-top: 4rem;
+        }
       }
     `}</style>
   </section>

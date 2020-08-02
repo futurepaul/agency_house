@@ -50,6 +50,12 @@ const Nav = () => {
             margin-bottom: -1rem;
             transform: scale(1, -1);
           }
+
+          @media all and (max-width: 480px) {
+            .nav {
+              display: none;
+            }
+          }
         `}
       </style>
     </div>

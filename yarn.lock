@@ -1052,6 +1052,11 @@
     style-value-types "^3.1.7"
     tslib "^1.10.0"
 
+"@thebiltheory/usebreakpoints@^1.1.2":
+  version "1.1.2"
+  resolved "https://registry.yarnpkg.com/@thebiltheory/usebreakpoints/-/usebreakpoints-1.1.2.tgz#766bdcd8bbe53fcbaaef66cf7950e44a09252c1d"
+  integrity sha512-CHTWQL9YYUowqAttnYIuA0ppFR2htAok5aap2KQ5SZh6Nls0PHdbGf2pdGiZPENZy/9IQWgMNCctCserRqaXBw==
+
 "@types/color-name@^1.1.1":
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/@types/color-name/-/color-name-1.1.1.tgz#1c1261bbeaa10a8055bbc5d8ab84b7b2afc846a0"

@@ -39,6 +39,29 @@ export const CreativeCard = ({ person, ownPage = false }) => {
               padding-top: 1rem;
               width: 20vw;
             }
+
+            @media all and (max-width: 480px) {
+              h2 {
+                padding-top: 1rem;
+                width: 80vw;
+              }
+              .img-wrap {
+                width: 80vw;
+                height: 80vw;
+                background-color: white;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+              }
+              img {
+                max-width: 80vw;
+                max-height: 80vw;
+              }
+              section {
+                margin-bottom: 2rem;
+                margin-top: 2rem;
+              }
+            }
           `}
         </style>
       </section>
@@ -105,8 +128,6 @@ const PlaceFor = () => (
         +folks with a passion project of their own
         <br />
       </p>
-      <div className="spacer" />
-      <div className="spacer" />
       <p>
         +folks who want to work on other folks’s passion projects
         <br />
@@ -130,8 +151,6 @@ const PlaceFor = () => (
         padding: 0 4rem;
       }
       .row {
-        display: flex;
-        flex-direction: row;
         align-items: start;
         justify-content: space-around;
       }
@@ -140,6 +159,21 @@ const PlaceFor = () => (
       }
       .uppercase {
         text-transform: uppercase;
+      }
+
+      @media all and (max-width: 480px) {
+        .content {
+          padding: 0 2rem;
+        }
+        .row p {
+          width: 80vw;
+          margin-bottom: 0;
+          margin-top: 0;
+        }
+
+        .row p:nth-child(1) {
+          margin-top: 2rem;
+        }
       }
     `}</style>
   </section>
@@ -168,6 +202,7 @@ const Ready = () => (
         background-color: ${theme.dark1};
         width: 30vw;
         padding: 5rem;
+        font-size: 3rem;
       }
 
       .blaze-wrap {
@@ -182,12 +217,7 @@ const Ready = () => (
         object-fit: cover;
         margin-top: -10rem;
       }
-      h2 {
-        font-size: 3rem;
-        font-weight: normal;
-        text-transform: uppercase;
-        width: 60vw;
-      }
+
       section {
         min-height: 100vh;
         display: flex;
@@ -196,10 +226,28 @@ const Ready = () => (
       }
       .row {
         flex: 1;
-        display: flex;
-        flex-direction: row;
         align-items: center;
         justify-content: space-around;
+      }
+
+      @media all and (max-width: 480px) {
+        .blaze-wrap {
+          margin-bottom: 0rem;
+          border: 2px solid ${theme.tan3};
+          padding: 1rem;
+        }
+        #ready h2 {
+          width: 70vw;
+        }
+        #ready img {
+          border: 10px solid ${theme.dark2};
+          max-width: 90vw;
+          object-fit: cover;
+          margin-top: 2rem;
+        }
+        #ready {
+          margin-bottom: 4rem;
+        }
       }
     `}</style>
   </section>

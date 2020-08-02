@@ -13,6 +13,10 @@ body {
   overflow-x: hidden;
 }
 
+a {
+  color: #f3f0e9;
+}
+
 h1,
 h2,
 h3,
@@ -44,4 +48,10 @@ html {
 .center {
   justify-content: center;
   align-items: center;
+}
+
+@media all and (max-width: 480px) {
+  .row {
+    flex-direction: column;
+  }
 }
