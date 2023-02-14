@@ -10,7 +10,7 @@ export const CreativeCard = ({ person, ownPage = false }) => {
   const slug = slugify(person.name);
 
   return (
-    <Link href={`/talent/[pid]`} as={`/talent/${slug}`}>
+    <Link legacyBehavior href={`/talent/[pid]`} as={`/talent/${slug}`}>
       <section>
         <img src={`/talent_photos/${slug}.jpg`} />
         <h2>

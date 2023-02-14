@@ -5,7 +5,7 @@ const Header = () => {
   return (
     <header>
       <div>
-        <Link href="/">
+        <Link legacyBehavior href="/">
           <img src="/ah_logo_small.svg" alt="Agency House logo" />
         </Link>
       </div>

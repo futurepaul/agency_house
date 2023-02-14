@@ -3,16 +3,16 @@ const Nav = () => {
   return (
     <div className="nav">
       <div className="row">
-        <Link href="/talent">
+        <Link legacyBehavior href="/talent">
           <a>Talent</a>
         </Link>
-        <Link href="/consult">
+        <Link legacyBehavior href="/consult">
           <a>Consult</a>
         </Link>
-        <Link href="/projects">
+        <Link legacyBehavior href="/projects">
           <a>Projects</a>
         </Link>
-        <Link href="/about">
+        <Link legacyBehavior href="/about">
           <a>About</a>
         </Link>
       </div>

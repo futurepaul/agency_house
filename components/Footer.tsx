@@ -33,17 +33,17 @@ const Footer = () => {
           <section>
             <h2>Talent</h2>
             <p>
-              <Link href="/talent#whofor">
+              <Link legacyBehavior href="/talent#whofor">
                 <a>Who it's for</a>
               </Link>
             </p>
             <p>
-              <Link href="/talent#members">
+              <Link legacyBehavior href="/talent#members">
                 <a>Members</a>
               </Link>
             </p>
             <p>
-              <Link href="/talent#join">
+              <Link legacyBehavior href="/talent#join">
                 <a>Want to join?</a>
               </Link>
             </p>
@@ -51,17 +51,17 @@ const Footer = () => {
           <section>
             <h2>Projects</h2>
             <p>
-              <Link href="/projects#cycle">
+              <Link legacyBehavior href="/projects#cycle">
                 <a>How it works</a>
               </Link>
             </p>
             <p>
-              <Link href="/projects#tokens">
+              <Link legacyBehavior href="/projects#tokens">
                 <a>"Tokens?"</a>
               </Link>
             </p>
             <p>
-              <Link href="/projects#code">
+              <Link legacyBehavior href="/projects#code">
                 <a>Code of the west</a>
               </Link>
             </p>
@@ -69,12 +69,12 @@ const Footer = () => {
           <section>
             <h2>About</h2>
             <p>
-              <Link href="/about#story">
+              <Link legacyBehavior href="/about#story">
                 <a>Story</a>
               </Link>
             </p>
             <p>
-              <Link href="/about#mission">
+              <Link legacyBehavior href="/about#mission">
                 <a>Mission</a>
               </Link>
             </p>
@@ -83,7 +83,7 @@ const Footer = () => {
         <div className="ack">
           <section>
             <h2>
-              <Link href="/acknowledgements">
+              <Link legacyBehavior href="/acknowledgements">
                 <a>Acknowledgements</a>
               </Link>
             </h2>
